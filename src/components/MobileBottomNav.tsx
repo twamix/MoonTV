@@ -64,15 +64,6 @@ const MobileBottomNav = ({ activePath }: MobileBottomNavProps) => {
     { icon: VenetianMask, label: '日漫', href: '/douban?type=tv&tag=日本动画' },
   ];
 
-  const { siteName } = useSite();
-  if (siteName !== 'MoonTV') {
-    navItems.push({
-      icon: Github,
-      label: 'MoonTV',
-      href: 'https://github.com/senshinya/MoonTV',
-    });
-  }
-
   const isActive = (href: string) => {
     const typeMatch = href.match(/type=([^&]+)/)?.[1];
     const tagMatch = href.match(/tag=([^&]+)/)?.[1];
